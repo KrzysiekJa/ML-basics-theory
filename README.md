@@ -4,6 +4,7 @@
 ```
 (1) Implementations of bacis algorithms and simulations.
 (2) Basic usage of matrix operations (better performance).
+(3) Optimalization process on Restrigin function. 
 ```
 
 ###### Technology:
