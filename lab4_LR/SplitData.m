@@ -5,23 +5,23 @@ if size(X, 2) ~= size(Y, 2)
 end
 
 setLen = size(X, 2); % number of columns
-ratioAmountTr = floor(ratio("train") * setLen);
-ratioAmountVal = ratioAmountTr + floor(ratio("val") * setLen);
+trainAmount = floor(ratio("train") * setLen);
+valAmount = trainAmount + floor(ratio("val") * setLen);
 rand_idx = randperm( setLen );
 
 X = X(rand_idx);
 Y = Y(rand_idx);
 
 % training set
-Xtr = X(:, 1:ratioAmountTr);
-Ytr = Y(:, 1:ratioAmountTr);
+Xtr = X(:, 1:trainAmount);
+Ytr = Y(:, 1:trainAmount);
 
 % validation set
-Xval = X(:, ratioAmountTr:ratioAmountVal);
-Yval = Y(:, ratioAmountTr:ratioAmountVal);
+Xval = X(:, trainAmount:valAmount);
+Yval = Y(:, trainAmount:valAmount);
 
 % testing set
-Xte = X(:, ratioAmountVal:end );
-Yte = Y(:, ratioAmountVal:end );
+Xte = X(:, valAmount:end );
+Yte = Y(:, valAmount:end );
 
 end
