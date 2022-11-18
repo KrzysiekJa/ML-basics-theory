@@ -2,6 +2,7 @@ clearvars; close all; clc;
 format compact;
 
 disp(' >> Krzysztof Jarek << ');
+disp('  >>   martensit   << ');
 
 [X, Y] = ReadData;
 
@@ -15,9 +16,9 @@ ratio = dictionary( names, parts );
 
 [Xtr, Ytr, Xval, Yval, Xte, Yte] = SplitData(X, Y, ratio);
 
-Theta = zeros(1, size(X,1))
+Theta = zeros(size(X,1), 1);
 
-[J, dJ] = CostFun(X, Y, Theta)
+[J, dJ] = CostFun(X, Y, Theta);
 
-%NumdJ = NumGrad(X, Y, Theta);
+NumdJ = NumGrad(X, Y, Theta)
 %[ThetaOpt, JOpt] = FindTheta(Theta0, X, Y);

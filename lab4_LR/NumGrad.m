@@ -2,6 +2,7 @@ function NumdJ = NumGrad( X, Y, Theta )
 % help: https://www.matrixlab-examples.com/gradient.html
 
 e = 1e-5;
+NumdJ = zeros( size(Theta, 2) );
 
 for i = 1:size(Theta, 2)
     Theta(i) = Theta(i) - e;
