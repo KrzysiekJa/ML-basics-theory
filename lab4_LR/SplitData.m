@@ -4,24 +4,25 @@ if size(X, 2) ~= size(Y, 2)
     return
 end
 
-setLen = size(X, 2); % number of columns
+setLen = size(X, 2); % number of columns/samples
 trainAmount = floor(ratio("train") * setLen);
-valAmount = trainAmount + floor(ratio("val") * setLen);
+valAmount   = floor(ratio("val") * setLen);
+%testAmount  = floor(ratio("test") * setLen);
 rand_idx = randperm( setLen );
 
 X = X(rand_idx);
 Y = Y(rand_idx);
 
 % training set
-Xtr = X(:, 1:trainAmount);
-Ytr = Y(:, 1:trainAmount);
+Xtr = X(:, 1:trainAmount); X(:, 1:trainAmount) = [];
+Ytr = Y(:, 1:trainAmount); Y(:, 1:trainAmount) = [];
 
 % validation set
-Xval = X(:, trainAmount:valAmount);
-Yval = Y(:, trainAmount:valAmount);
+Xval = X(:, 1:valAmount); X(:, 1:valAmount) = [];
+Yval = Y(:, 1:valAmount); Y(:, 1:valAmount) = [];
 
 % testing set
-Xte = X(:, valAmount:end );
-Yte = Y(:, valAmount:end );
+Xte = X(:, 1:end );
+Yte = Y(:, 1:end );
 
 end
