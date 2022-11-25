@@ -1,7 +1,10 @@
-function [X, Y] = ReadData
+function [X, Y] = ReadData( Y_name )
 
-load LC_data.mat X Y1;
+vars = {'X', Y_name};
 
-Y = Y1; % ferrit
+struct = load('LC_data.mat', vars{:});
+
+X = struct.X;
+Y = struct.(Y_name); % ferrit
 
 end
