@@ -4,7 +4,7 @@ format compact;
 disp(' >> Krzysztof Jarek << ');
 disp('  >>   ferrit   << ');
 
-[X, Y] = ReadData('Y2');
+[X, Y] = ReadData('Y1');
 
 X = MapFea(X);
 [X, mu, sig] = NormFea(X);
