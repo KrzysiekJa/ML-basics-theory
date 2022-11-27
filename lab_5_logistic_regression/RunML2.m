@@ -11,12 +11,12 @@ X = MapFea(X);
 
 X(1, :) = ones(1, size(X,2)); % repairing row with NaNs
 
-Theta = ones(size(X,1), 1) %rand(size(X,1), 1)
+Theta = rand(size(X,1), 1)
 
 [J, dJ] = CostFun(X, Y, Theta)
-%NumdJ =  NumGrad(X, Y, Theta)
+NumdJ =  NumGrad(X, Y, Theta)
 
-%[ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
+[ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
 
 %y = ThetaOpt' * X;
 %y = reshape(Y, length(t), length(T));

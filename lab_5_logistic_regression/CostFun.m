@@ -8,5 +8,5 @@ dJ = ( (h_theta - Y) * (X') /m )';
 end
 
 % h_theta(x) = g( theta' * x)
-%sigmoid:
+% sigmoid:
 % g(x) = 1. / (1 + exp(-x))
