@@ -12,7 +12,7 @@ y = reshape(Y, length(t), length(T));
 
 contour( T, t, y, [0.5, 0.5], 'k');
 
-legend(  'y = 1', 'y = 0', 'line', 'Location', 'northoutside' );
+legend( 'y = 1', 'y = 0', 'line', 'Location', 'northoutside' );
 xlabel('T, C');
 ylabel('t, s');
 
