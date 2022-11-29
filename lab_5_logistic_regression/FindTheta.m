@@ -6,5 +6,3 @@ options = optimoptions('fminunc','Algorithm','trust-region','SpecifyObjectiveGra
 [ThetaOpt, JOpt] = fminunc(fun, Theta0, options);
 
 end
-
-% zamienić na fminunc()

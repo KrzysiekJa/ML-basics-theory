@@ -4,6 +4,8 @@ format compact;
 disp(' >> Krzysztof Jarek << ');
 disp('  >>   ferrit   << ');
 
+% ---------------------------------------------------
+
 [X, Y] = ReadData('Y1');
 
 X = MapFea(X);
@@ -18,8 +20,15 @@ NumdJ =  NumGrad(X, Y, Theta)
 
 [ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
 
-%y = ThetaOpt' * X;
-%y = reshape(Y, length(t), length(T));
+PlotBoundry( X, Y, ThetaOpt, mu, sig );
 
-%PlotBoundry();
+% ---------------------------------------------------
 
+[~, Y] = ReadData('Y2');
+
+[J, dJ] = CostFun(X, Y, Theta)
+NumdJ =  NumGrad(X, Y, Theta)
+
+[ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
+
+PlotBoundry( X, Y, ThetaOpt, mu, sig );

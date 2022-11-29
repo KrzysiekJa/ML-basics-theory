@@ -1,18 +1,19 @@
 function PlotBoundry( X, Y, Theta, mu, sig)
 
+X = X .* sig + mu;
+
+figure;
+PlotData( X, Y );
+
+T = unique( X(2,:) );
+t = unique( X(3,:) );
+y = Theta' * X;
+y = reshape(Y, length(t), length(T));
+
+contour( T, t, y, [0.5, 0.5], 'k');
+
+legend(  'y = 1', 'y = 0', 'line', 'Location', 'northoutside' );
+xlabel('T, C');
+ylabel('t, s');
 
 end
-
-% X1
-% X2
-
-% Ynx2  Xnx1
-
-% surf( X1, X2, Y)
-% Z = theta' * X
-
-% h_theta(x) = g( theta' * X)
-
-% Z = theta' * X
-% contour(X1, X2, Z, [0,0])
-% zrobić reshape()
