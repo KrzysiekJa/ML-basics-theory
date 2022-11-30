@@ -18,6 +18,8 @@ ratio = dictionary( names, parts );
 
 [Xtr, Ytr, Xval, Yval, Xte, Yte] = SplitData(X, Y, ratio);
 
+Ytr = Y_to_Y01( Ytr );
+
 
 Theta = rand(size(X,1), 1)
 
@@ -27,4 +29,5 @@ NumdJ =  NumGrad(X, Y, Theta)
 [ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
 
 
-PlotBoundry( X, Y, ThetaOpt, mu, sig );
+%PlotBoundry( X, Y, ThetaOpt, mu, sig );
+

@@ -1,5 +1,10 @@
 function Y01 = Y_to_Y01( Y )
 
+n = max(Y);
+Y01 = zeros( n, length(Y) );
+
+linearIdx = sub2ind( size(Y01), Y, 1:length(Y) );
+Y01( linearIdx ) = 1;
 
 end
 
