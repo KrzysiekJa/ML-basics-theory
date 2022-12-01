@@ -26,7 +26,7 @@ Theta = rand(size(X,1), 1)
 [J, dJ] = CostFun(X, Y, Theta)
 NumdJ =  NumGrad(X, Y, Theta)
 
-[ThetaOpt, JOpt] = FindTheta(X, Y, Theta)
+[ThetaOpt, JOpt] = FindTheta(Xtr, Ytr, Theta)
 
 
 %PlotBoundry( X, Y, ThetaOpt, mu, sig );
