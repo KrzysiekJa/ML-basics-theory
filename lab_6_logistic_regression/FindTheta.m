@@ -13,5 +13,3 @@ for i = 1:size(Y, 1)
 end
 
 end
-
-% zamienić na fminunc()

@@ -29,5 +29,5 @@ NumdJ =  NumGrad(X, Y, Theta)
 [ThetaOpt, JOpt] = FindTheta(Xtr, Ytr, Theta)
 
 
-%PlotBoundry( X, Y, ThetaOpt, mu, sig );
+PlotBoundry( X, Y, ThetaOpt, mu, sig );
 
