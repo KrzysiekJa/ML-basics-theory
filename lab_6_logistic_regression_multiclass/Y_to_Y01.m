@@ -14,11 +14,11 @@ end
 %        [0 0 1 1 0 0]
 %        [0 0 0 0 1 1]]
 
-% tylko dla zbioru uczącego
+% ^ only for training set
 
 % theta = [theta^1 theta^2 theta^3]
 
-% Z = sigmoid( h_theta' * X )  X = [x1 x2]
+% Z = sigmoid( h_theta' * X )    X = [x1 x2]
 % Z = [ 0.1  0.2]
 %     [ 0.2  ...]
 %     [ 0.2  ...]

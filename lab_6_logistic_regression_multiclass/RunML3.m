@@ -31,3 +31,6 @@ NumdJ =  NumGrad(X, Y, Theta)
 
 PlotBoundry( X, Y, ThetaOpt, mu, sig );
 
+
+[~, Z] = max( sigmoid( ThetaOpt' * Xte ) );
+CM = ConfMatrix( Yte, Z )

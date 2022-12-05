@@ -8,6 +8,7 @@
 (4) Linear regression (LR) for the process of laminar cooling of a cylindrical sheet.
 (5) 
 (6) 
+(6) 
 ```
 
 ###### Technology:
