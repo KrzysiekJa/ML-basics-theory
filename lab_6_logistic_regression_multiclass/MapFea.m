@@ -26,5 +26,5 @@ end
 
 disp(' ');
 disp("hypothesis:");
-disp(hypothesis + "]^T");
+disp(hypothesis + "]'");
 end

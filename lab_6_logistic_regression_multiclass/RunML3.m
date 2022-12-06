@@ -16,7 +16,7 @@ names = ["train" "val" "test"];
 parts = [0.8 0 0.2];
 ratio = dictionary( names, parts );
 
-[Xtr, Ytr, Xval, Yval, Xte, Yte] = SplitData(X, Y, ratio);
+[Xtr, Ytr, ~, ~, Xte, Yte] = SplitData(X, Y, ratio);
 
 Ytr = Y_to_Y01( Ytr );
 

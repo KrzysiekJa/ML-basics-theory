@@ -1,6 +1,6 @@
 function CM = ConfMatrix( Yte, Z )
 
-dim = max(Yte); % should be equal max(Z)
+dim = max( [Yte, Z] );
 CM  = zeros( dim, dim );
 
 for i = 1 : length(Yte)

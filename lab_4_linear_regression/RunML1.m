@@ -15,7 +15,7 @@ names = ["train" "val" "test"];
 parts = [0.8 0 0.2];
 ratio = dictionary( names, parts );
 
-[Xtr, Ytr, Xval, Yval, Xte, Yte] = SplitData(X, Y, ratio);
+[Xtr, Ytr, ~, ~, Xte, Yte] = SplitData(X, Y, ratio);
 
 Theta = rand(size(X,1), 1)
 
