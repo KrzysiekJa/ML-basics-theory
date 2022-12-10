@@ -1,7 +1,7 @@
 function [J, dJ] = CostFun( X, Y, Theta )
 
 m  = size(X, 2);
-lambda = 1.0;
+lambda = 0.000002;
 dJ = zeros( size(X,1), 1 );
 
 h_theta = sigmoid( Theta' * X );
