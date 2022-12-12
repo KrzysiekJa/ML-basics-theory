@@ -20,17 +20,28 @@ ratio = dictionary( names, parts );
 
 
 Theta =  rand(size(X,1), 1)
+lambdas = [1, 0.1, 0.01, 0.001, 0.00001];
+f_scores = zeros(size(lambdas));
 
-[J, dJ] = CostFun(X, Y, Theta)
-NumdJ =  NumGrad(X, Y, Theta)
+for i = 1:length(lambdas)
+    [J, dJ] = CostFun(X, Y, Theta, lambdas(i));
+    %NumdJ =  NumGrad(X, Y, Theta, lambdas(i));
+    
+    [ThetaOpt, JOpt] = FindTheta(Xtr, Ytr, Theta, lambdas(i))
+    
+    
+    PlotBoundry( X, Y, ThetaOpt, mu, sig );
+    
+    
+    Z  = sigmoid( ThetaOpt' * Xte ) >= 0.5;
+    CM = ConfMatrix( Yte, Z )
+    
+    F = Fscore(CM)
+    f_scores(i) = F;
+end
 
-[ThetaOpt, JOpt] = FindTheta(Xtr, Ytr, Theta)
-
-
-PlotBoundry( X, Y, ThetaOpt, mu, sig );
-
-
-Z  = sigmoid( ThetaOpt' * Xte ) >= 0.5;
-CM = ConfMatrix( Yte, Z )
-
-F = Fscore(CM)
+figure;
+plot(lambdas, f_scores);
+set(gca, 'xscale', 'log');
+xlabel('lambda');
+ylabel('F-score');
