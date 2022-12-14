@@ -1,8 +1,10 @@
 function [X, Y] = ReadData( n )
 
-struct = load('PCA_data.mat');
+vars = {['X' num2str(n)], ['Y' num2str(n)]};
 
-X = struct.X;
-Y = Y; % ferrit
+struct = load('PCA_data.mat', vars{:});
+
+X = struct.(vars{1});
+Y = struct.(vars{2});
 
 end
