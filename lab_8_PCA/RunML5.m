@@ -6,16 +6,13 @@ disp(' >> Krzysztof Jarek << ');
 
 [X, Y] = ReadData(1);
 
+% PCA steps
 % >> Step 1
-X_nex = ( X - mean(X, 2) ); % ./ std(X, 0, 2)
+[mu, X_std] = deal( mean(X, 2), std(X, 0, 2) ); 
+X_std = ( X - mu ) ./ X_std;
 
 % >> Step 2
-CovM = cov(X_nex')
-
-% CovM = zeros(size(X_nex,1), size(X_nex,1));
-% for i = 1:size(X_nex,1)
-%     CovM(i,:) = sum( (X_nex(i,:) - mean(X_nex(i,:)) )  * ( X_nex(i,:) - mean(X_nex(i,:)) )' ) / length( (X_nex(i,:) );
-% end
+CovM = cov(X_std')
 
 % >> Step 3
 [V, d] = eig(CovM);
@@ -26,16 +23,29 @@ d = d(ind, ind)
 V = V(:, ind)
 
 % >> Step 5 -> taking two most variant dims
-X_final = V( :, ind(1:2) )' * X_nex( ind(1:2), : );
-X_final = X_final';
+n_components  = 2;
+X_transformed = ( X_std' * V( :, ind(1:n_components)) )';
 
-%variance = d / sum(d(:))
+% other operations
+variance = d / sum(d(:))
+pca_error_variance = 1 - sum( diag(variance) )
+
+
+figure;
+PlotData( X_transformed, Y );
+xlabel( ['Dim ' num2str( ind(1) )] );
+ylabel( ['Dim ' num2str( ind(2) )] );
+zlabel( 'Y' );
+
+
+X_de_transformed = ( X_transformed' * V( :, ind(1:n_components))' )';
+
+pca_error_direct = sum( X - (X_de_transformed .* X_std + mu), 'all' ) / numel( X )
 
 
 %     m
 % ∑ = ∑(x - mi) * (x-mi)^T
 %      5x500              5x5
-
-% eig
-% svd   A^T * A -> N -> sqrt()
+% eig()
+% svd()
 

@@ -1,8 +1,6 @@
 function PlotData( Z, Y )
 
-scatter( Z(2,Y==1), Z(3,Y==1), 'b*' );
-hold on;
-scatter( Z(2,Y==0), Z(3,Y==0), 'rx' );
+scatter3( Z(1,:), Z(2,:), Y , 'b.' );
 hold on;
 
 end
