@@ -5,7 +5,7 @@ disp(' >> Krzysztof Jarek << ');
 
 
 for i = 1:4
-    [X, Y] = ReadData(1);
+    [X, Y] = ReadData(i);
     
     % PCA steps
     % >> Step 1
