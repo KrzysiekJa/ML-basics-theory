@@ -9,11 +9,11 @@ for i = 1:4
     
     % PCA steps
     % >> Step 1
-    [mu, X_std] = deal( mean(X, 2), std(X, 0, 2) ); 
-    X_std = ( X - mu ) ./ X_std;
+    % [mu, X_std] = deal(0, 1);
+    % X_norm = ( X - mu ) ./ X_std;
     
     % >> Step 2
-    CovM = cov(X_std')
+    CovM = cov(X')
     
     % >> Step 3
     [V, d] = eig(CovM);
@@ -24,12 +24,11 @@ for i = 1:4
     V = V(:, ind)
     
     % >> Step 5 -> taking two most variant dims
-    n_components  = 2;
-    X_transformed = ( X_std' * V( :, ind(1:n_components)) )';
+    X_transformed = ( V( :, 1:2 ) )' * X;
     
     % other operations
-    variance = d / sum(d(:))
-    pca_error_variance = 1 - sum( diag(variance) )
+    %variance = d / sum(d(:))
+    pca_error_variance = ( d(1,1) + d(2,2) ) / sum( diag(d) )
     
     
     figure;
@@ -40,9 +39,9 @@ for i = 1:4
     zlabel( 'Y' );
     
     
-    X_de_transformed = ( X_transformed' * V( :, ind(1:n_components))' )';
+    X_de_transformed = ( X_transformed' * V( :, 1:2 )' )';
     
-    pca_error_direct = sum( X - (X_de_transformed .* X_std + mu), 'all' ) / numel( X )
+    pca_error_direct = sum( X - (X_de_transformed), 'all' ) / numel( X )
 end
 
 
