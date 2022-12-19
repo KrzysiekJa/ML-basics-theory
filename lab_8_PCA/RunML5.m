@@ -9,6 +9,7 @@ for i = 1:4
     
     % PCA steps
     % >> Step 1
+
     % [mu, X_std] = deal(0, 1);
     % X_norm = ( X - mu ) ./ X_std;
     
@@ -24,24 +25,26 @@ for i = 1:4
     V = V(:, ind)
     
     % >> Step 5 -> taking two most variant dims
-    X_transformed = ( V( :, 1:2 ) )' * X;
+    X_transformed = V( :, 1:2 )' * X;
     
-    % other operations
-    %variance = d / sum(d(:))
-    pca_error_variance = ( d(1,1) + d(2,2) ) / sum( diag(d) )
+    % besides PCA
+    eigenvalues_proportion = ( d(1,1) + d(2,2) ) / sum( diag(d) )
     
     
     figure;
     PlotData( X_transformed, Y );
     title ( ['Simulation no ' num2str( i )] );
-    xlabel( ['Dim ' num2str( ind(1) )] );
-    ylabel( ['Dim ' num2str( ind(2) )] );
+    labelFun = @(v) [num2str( v(1),3 ) '*m1 + ' num2str( v(2),3 ) '*m2 + '...
+                     num2str( v(3),3 ) '*m3 + ' num2str( v(4),3 ) '*m4 + '...
+                     num2str( v(5),3 ) '*m5'];
+    xlabel( labelFun( V(:,1) ) , 'rotation', 15 );
+    ylabel( labelFun( V(:,2) ) , 'rotation', -25 );
     zlabel( 'Y' );
     
     
-    X_de_transformed = ( X_transformed' * V( :, 1:2 )' )';
+    X_de_transformed = V( :, 1:2 ) * X_transformed;
     
-    pca_error_direct = sum( X - (X_de_transformed), 'all' ) / numel( X )
+    pca_error = sum( X - X_de_transformed, 'all' ) / numel( X )
 end
 
 
