@@ -8,6 +8,7 @@ disp(' >> Krzysztof Jarek << ');
 
 
 
+
 % theta     generacja: randn(nf+1, nu)
 % X         generacja: randn(nf, nu)
 
