@@ -1,4 +1,4 @@
-function [ThetaOpt, JOpt] = FindTheta( X, Y, Theta0, lambda )
+function [Theta_X_Opt, JOpt]=FindTheta( Y, R, Theta_X0, nu, np, nf )
 
 alpha     = 0.05
 num_iters = 40
@@ -12,6 +12,6 @@ end
 fun = @(z) CostFun(X, Y, z, lambda);
 options = optimoptions('fminunc','Algorithm','trust-region','SpecifyObjectiveGradient',true);
 
-[ThetaOpt, JOpt] = fminunc(fun, theta_tmp, options);
+[Theta_X_Opt, JOpt] = fminunc(fun, theta_tmp, options);
 
 end

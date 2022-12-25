@@ -3,14 +3,19 @@ format compact;
 
 disp(' >> Krzysztof Jarek << ');
 
-
 [Y,R] = ReadData();
 
+
+nf = 4;
+nu = size(Y, 1);
+np = size(Y, 2);
+theta = ones( nf, nu );
+X = ones( nf, np );
 
 
 
 % theta     generacja: randn(nf+1, nu)
-% X         generacja: randn(nf, nu)
+% X         generacja: randn(nf, np)
 
 % theta_X : 100x1 -> 5x20
 %           160x1 -> 4x40 (zamienić w CostFun) -> 5x40

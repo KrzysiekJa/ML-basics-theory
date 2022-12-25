@@ -1,4 +1,4 @@
-function [J, dJ] = CostFun( X, Y, Theta, lambda )
+function [J, dJ] = CostFun( Y, R, Theta_X, nu, np, nf )
 
 m  = size(X, 2);
 dJ = zeros( size(X,1), 1 );
@@ -12,7 +12,3 @@ dJ(1)     = ( (h_theta - Y) * (X(1,:)') /m )';
 dJ(2:end) = ( (h_theta - Y) * (X(2:end,:)') /m )' + (lambda/m) * Theta(2:end,:);
 
 end
-
-% h_theta(x) = g( theta' * x)
-% sigmoid:
-% g(x) = 1. / (1 + exp(-x))
