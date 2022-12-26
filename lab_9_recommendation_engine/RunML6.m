@@ -9,8 +9,14 @@ disp(' >> Krzysztof Jarek << ');
 nf = 4;
 nu = size(Y, 1);
 np = size(Y, 2);
-theta = ones( nf, nu );
+theta = ones( nf+1, nu );
 X = ones( nf, np );
+
+Theta_X = [ reshape(theta, [], 1); reshape(X, [], 1) ]; % by columns
+
+
+[ J, dJ ] = CostFun( Y, R, Theta_X, nu, np, nf )
+NumdJ = NumGrad( Y, R, Theta_X, nu, np, nf )
 
 
 

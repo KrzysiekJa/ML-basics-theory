@@ -1,14 +1,15 @@
-function [J, dJ] = CostFun( Y, R, Theta_X, nu, np, nf )
+function [ J, dJ ] = CostFun( Y, R, Theta_X, nu, np, nf )
 
-m  = size(X, 2);
-dJ = zeros( size(X,1), 1 );
+lambda = 1;
+dJ = zeros( 2*nf+1, 1 );
 
-h_theta = sigmoid( Theta' * X );
+theta = reshape( Theta_X( 1:((nf+1)*nu) ), nf+1, nu);
+X = reshape( [ ones(nf+1, 1) Theta_X( ((nf+1)*nu+1):end ) ], nf+1, np);
 
-J = - sum( Y .* log(h_theta) + (1-Y) .* log(1-h_theta) ) /m ;
-J = J + (lambda/(2*m)) * sum( Theta .^ 2);
+J = 0.5 * sum( (theta' * X - Y).^2 ) + (lambda/2) * ( sum( theta .^ 2, "all" ) + sum( X .^ 2, "all" ) );
 
-dJ(1)     = ( (h_theta - Y) * (X(1,:)') /m )';
-dJ(2:end) = ( (h_theta - Y) * (X(2:end,:)') /m )' + (lambda/m) * Theta(2:end,:);
+dJ(1)     = ( theta(1,:)' * X(1,:) - Y(1,:))';
+dJ(2:nf+1)   = ( theta(2:end,:)' * X(2:end,:) - Y )' + lambda * theta(2:end,:, "all");
+dJ(nf+2:end) = ( theta(2:end,:)' * X(2:end,:) - Y )' + lambda * X(2:end,:, "all");
 
 end
