@@ -1,5 +1,5 @@
 clearvars; close all; clc;
-format compact;
+format shortG;
 
 disp(' >> Krzysztof Jarek << ');
 
