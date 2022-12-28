@@ -18,6 +18,7 @@ Theta_X = [ reshape(theta, [], 1); reshape(X, [], 1) ]; % by columns
 [ J, dJ ] = CostFun( Y, R, Theta_X, nu, np, nf )
 NumdJ = NumGrad( Y, R, Theta_X, nu, np, nf )
 
+[ Theta_X_Opt, JOpt ] = FindTheta( Y, R, Theta_X, nu, np, nf );
 
 
 % theta     generacja: randn(nf+1, nu)
