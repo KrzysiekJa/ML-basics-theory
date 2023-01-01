@@ -3,14 +3,14 @@ format shortG;
 
 disp(' >> Krzysztof Jarek << ');
 
-[Y,R] = ReadData();
+[ Y, R ] = ReadData();
 
 
 nf = 4;
 nu = size(Y, 1);
 np = size(Y, 2);
-theta = ones( nf+1, nu );
-X = ones( nf, np );
+theta = rand(nf+1, nu); %ones( nf+1, nu );
+X = rand(nf, np); %ones( nf, np );
 
 Theta_X = [ reshape(theta, [], 1); reshape(X, [], 1) ]; % by columns
 
@@ -21,17 +21,9 @@ NumdJ = NumGrad( Y, R, Theta_X, nu, np, nf )
 [ Theta_X_Opt, JOpt ] = FindTheta( Y, R, Theta_X, nu, np, nf )
 
 
-% theta     generacja: randn(nf+1, nu)
-% X         generacja: randn(nf, np)
+theta_new = reshape( Theta_X_Opt( 1:((nf+1)*nu) ), nf+1, nu);
+X_new     = [ ones(1, np); reshape( Theta_X_Opt( ((nf+1)*nu+1):end ), nf, np) ];
 
-% theta_X : 100x1 -> 5x20
-%           160x1 -> 4x40 (zamienić w CostFun) -> 5x40
+Y_pred = theta_new' * X_new
 
-% theta = randn(nf+1, nu)
-% X = randn(nf, nu)
-% theta_X = [ theta(:), X(:) ]
-
-% jeden z wyników: 2,5e-09
-% ostateczne: J_OPT ~= 15,67
-
-% mean(mean(abs(Y-Y_pred))) ~= 1.4926 lub 0.67
+precision = mean( mean( abs(Y-Y_pred) ) )
