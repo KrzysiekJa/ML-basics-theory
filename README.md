@@ -9,8 +9,8 @@
 (5) Logistic regression (LogitR) for prediction of share of ferrite in steel after stepping down process.
 (6) Same logistic regression with multiclass prediction.
 (7) Same logistic regression with two-class prediction with two-class regularization.
-(8) PCA.
-(9) 
+(8) PCA for reduction of dynamic system simulation results' dimentions (5 to 2).
+(9) Recommendation engine: completing movie ratings.
 ```
 
 ###### Technology:
