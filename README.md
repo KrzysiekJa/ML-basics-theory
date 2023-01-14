@@ -1,5 +1,10 @@
 # ML-basics-theory
 
+###### Technology:
+```
+- Matlab m-scripts.
+```
+
 ###### Laboratories legend:
 ```
 (1) Implementations of bacis algorithms and simulations.
@@ -12,8 +17,10 @@
 (8) PCA for reduction of dynamic system simulation results' dimentions (5 to 2).
 (9) Recommendation engine: completing movie ratings.
 ```
+<br>
 
-###### Technology:
-```
-- Matlab m-scripts.
-```
+### Lab 4-6
+
+After hot rolling, sheets with different phase composition are subjected to a laminar cooling process. Sheet sweetening scheme after hot rolling:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/sheet_sweetening.png)
+
