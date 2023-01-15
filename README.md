@@ -24,3 +24,8 @@
 After hot rolling, sheets with different phase composition are subjected to a laminar cooling process. Sheet sweetening scheme after hot rolling:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/sheet_sweetening.png)
 
+### Lab 4
+
+Result:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/3Dplot_lin_reg.jpg)
+
