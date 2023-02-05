@@ -42,19 +42,19 @@ Results:
 ### Lab 6
 
 Division into classes depending on the range to which the share of ferrite will belong after metal descent. The individual classes correspond to the following ranges:
-Class 1: $F_f \in [0.8; 1]$
-Class 2: $F_f \in [0.7; 0.8]$
-Class 3: $F_f \in [0.6; 0.7]$
-Class 4: $F_f \in [0.5; 0.6]$
-Class 5: $F_f \in [0.4; 0.5]$
-Class 6: $F_f \in [0.3; 0.4]$
-Class 7: $F_f \in [0.2; 0.3]$
-Class 8: $F_f \in [0.1; 0.2]$
-Class 9: $F_f \in [0; 0.1]$
+Class 1: $F_f \in [0.8; 1]$  
+Class 2: $F_f \in [0.7; 0.8]$  
+Class 3: $F_f \in [0.6; 0.7]$  
+Class 4: $F_f \in [0.5; 0.6]$  
+Class 5: $F_f \in [0.4; 0.5]$  
+Class 6: $F_f \in [0.3; 0.4]$  
+Class 7: $F_f \in [0.2; 0.3]$  
+Class 8: $F_f \in [0.1; 0.2]$  
+Class 9: $F_f \in [0; 0.1]$  
 
 Result:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_multiclass_logistic_reg.jpg)
 
 Confusion matrix for classification:
-![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/confusion_matrix_multiclass.jpg)
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/confusion_matrix_multiclass.png)
 
