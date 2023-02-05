@@ -16,6 +16,7 @@
 (7) Same logistic regression with two-class prediction with two-class regularization.
 (8) PCA for reduction of dynamic system simulation results' dimentions (5 to 2).
 (9) Recommendation engine: completing movie ratings.
+(10) Project: GD vs SGD vs Data sampling (on SPAM data)
 ```
 <br>
 
@@ -28,4 +29,13 @@ After hot rolling, sheets with different phase composition are subjected to a la
 
 Result:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/3Dplot_lin_reg.jpg)
+
+### Lab 5
+
+Creation of two models (&theta;$$_1.$$ and &theta;$$_2.$$) capable of predicting whether the ferrite phase fraction is in the range 1: $$F_f.$$ &isin; [0.7; 0.8] and is within the range 2: $$F_f.$$ &isin; [0.7; 0.85].
+
+Result:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_logistic_reg_1.jpg.jpg)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_logistic_reg_2.jpg.jpg)
 
