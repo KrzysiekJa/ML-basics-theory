@@ -41,7 +41,7 @@ Results:
 
 ### Lab 6
 
-Division into classes depending on the range to which the share of ferrite will belong after metal descent. The individual classes correspond to the following ranges:
+Division into classes depending on the range to which the share of ferrite will belong after metal descent. The individual classes correspond to the following ranges:  
 Class 1: $F_f \in [0.8; 1]$  
 Class 2: $F_f \in [0.7; 0.8]$  
 Class 3: $F_f \in [0.6; 0.7]$  
