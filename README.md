@@ -32,7 +32,7 @@ Result:
 
 ### Lab 5
 
-Creation of two models ( $$ \inline \theta_1$$ and $$ \inline \theta_2$$ ) capable of predicting whether the ferrite phase fraction is in the range 1: $$ \inline F_f \in  [0.7; 0.8]$$ and is within the range 2: $$ \inline F_f \in [0.7; 0.85]$$.
+Creation of two models ( $\theta_1$ and $\theta_2$ ) capable of predicting whether the ferrite phase fraction is in the range 1: $F_f \in  [0.7; 0.8]$ and is within the range 2: $F_f \in [0.7; 0.85]$.
 
 Result:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_logistic_reg_1.jpg)
