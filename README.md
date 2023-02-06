@@ -41,6 +41,8 @@ Results:
 
 ### Lab 6
 
+**One vs. All**
+
 Division into classes depending on the range to which the share of ferrite will belong after metal descent. The individual classes correspond to the following ranges:  
 Class 1: $F_f \in [0.8; 1]$  
 Class 2: $F_f \in [0.7; 0.8]$  
@@ -57,4 +59,21 @@ Result:
 
 Confusion matrix for classification:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/confusion_matrix_multiclass.png)
+
+### Lab 7
+
+**Regularization**
+
+Creating a model that can predict the belonging of the vector *x* to one of the two classes. The training of the model takes into account the regularization.
+
+Results:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/regulatization_lambda_1.jpg)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/regulatization_lambda_0_00001.jpg)
+
+F-score/lambda:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_regularization_lambda.jpg)
+
+$^{*}$hypotheses written during runtime
+
 
