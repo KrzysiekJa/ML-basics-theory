@@ -77,6 +77,6 @@ Results:
 F-score/lambda:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_regularization_lambda.jpg)
 
-$ ^*$ hypotheses written during runtime
+*hypotheses written during runtime*
 
 
