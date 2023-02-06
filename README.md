@@ -67,13 +67,16 @@ Confusion matrix for classification:
 Creating a model that can predict the belonging of the vector *x* to one of the two classes. The training of the model takes into account the regularization.
 
 Results:
+
+* $\lambda = 1$:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/regulatization_lambda_1.jpg)
 
+* $\lambda = 0.00001$: 
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/regulatization_lambda_0_00001.jpg)
 
 F-score/lambda:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_regularization_lambda.jpg)
 
-$^{*}$hypotheses written during runtime
+$ ^*$ hypotheses written during runtime
 
 
