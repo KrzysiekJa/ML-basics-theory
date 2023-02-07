@@ -83,9 +83,9 @@ F-score/lambda:
 
 The results from the simulation of a dynamic system consisting of five bogies were used.
 
-![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/scratch_pca.jpg)
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/scratch_pca.png)
 
-![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/equation_pca.jpg)
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/equation_pca.png)
 
 Principal component analyzes were carried out for each of the data sets, the number of dimensions was reduced to 2.  
 
