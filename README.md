@@ -79,4 +79,18 @@ F-score/lambda:
 
 *hypotheses written during runtime*
 
+### Lab 8
+
+The results from the simulation of a dynamic system consisting of five bogies were used.
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/scratch_pca.jpg)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/equation_pca.jpg)
+
+Principal component analyzes were carried out for each of the data sets, the number of dimensions was reduced to 2.  
+
+Sample results:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_simulation_1_pca.jpg)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_simulation_4_pca.jpg)
 
