@@ -87,6 +87,8 @@ The results from the simulation of a dynamic system consisting of five bogies we
 
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/equation_pca.png)
 
+Simulations were carried out for different values of the masses of individual bogies. The result of each simulation was the maximum deflection of the first trolley. There are 4 sets of results: $(X^1, Y^1)$, $(X^2, Y^2)$, $(X^3, Y^3)$, $(X^4, Y^4)$.  
+
 Principal component analyzes were carried out for each of the data sets, the number of dimensions was reduced to 2.  
 
 Sample results:
