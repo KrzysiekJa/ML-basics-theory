@@ -104,7 +104,7 @@ Sample results:
 
 The task was to complete the missing ratings and indicate to each user two products that had not yet been rated. The common filtration algorithm was used to fill in the missing assessments. The learning effect was a matrix $\Theta$ containing the preferences of individual users and a matrix *𝐗* containing the characteristics of individual products:
 
-<p align="center"><img src="https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/vectors_theta_X_cf.png" width="450" height="350" /></p>
+<p align="center"><img src="https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/vectors_theta_X_cf.png" width="450" height="200" /></p>
 
 As a result, it allowed to complete the matrix *Y* with missing ratings.
 
