@@ -96,3 +96,15 @@ Sample results:
 
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_simulation_4_pca.jpg)
 
+### Lab 9
+
+**Collaborative filtering**
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/table_cf.png)
+
+The task was to complete the missing ratings and indicate to each user two products that had not yet been rated. The common filtration algorithm was used to fill in the missing assessments. The learning effect was a matrix $\Theta$ containing the preferences of individual users and a matrix *𝐗* containing the characteristics of individual products:
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/vectors_theta_X_cf.png)
+
+As a result, it allowed to complete the matrix *Y* with missing ratings.
+
