@@ -108,5 +108,5 @@ The task was to complete the missing ratings and indicate to each user two produ
 
 As a result, it allowed to complete the matrix *Y* with missing ratings.
 
-### $$Y = h_{\Theta}(X) = \Theta^T X$$
+## $$Y = h_{\Theta}(X) = \Theta^T X$$
 
