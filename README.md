@@ -114,11 +114,16 @@ As a result, it allowed to complete the matrix *Y* with missing ratings.
 
 **Gradient Descent (GD) vs Stochastic Gradient Descent (SGD) vs GD with Sampling**
 
-The project was prepared using **SPAM data**.
+The project was prepared using **SPAM E-mail Database** data from 1998. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
 
+Basic plots showing their performance has been showed below:
+
+* final minimum value found:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
 
+* the minimum value found depending on the number of iterations:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_perf.png)
 
+* execution time for the number of executions (7):
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/box_plot_GDvsSGDvsSampling_on_spam.png)
 
