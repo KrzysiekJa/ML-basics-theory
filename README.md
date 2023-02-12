@@ -110,3 +110,15 @@ As a result, it allowed to complete the matrix *Y* with missing ratings.
 
 ## $$Y = h_{\Theta}(X) = \Theta^T X$$
 
+### Project 1
+
+**Gradient Descent (GD) vs Stochastic Gradient Descent (SGD) vs GD with Sampling**
+
+The project was prepared using **SPAM data**.
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_perf.png)
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/box_plot_GDvsSGDvsSampling_on_spam.png)
+
