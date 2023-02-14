@@ -116,7 +116,9 @@ As a result, it allowed to complete the matrix *Y* with missing ratings.
 
 The project was prepared using **SPAM E-mail Database** data from 1998. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
 
-Basic plots showing their performance has been showed below:
+Basic plots showing their performance are showed below.
+
+Main problem with research: used dataset does not have a well-prepared classification labeling (misclassification error at least ~7%).
 
 * final minimum value found:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
@@ -127,3 +129,4 @@ Basic plots showing their performance has been showed below:
 * execution time for the number of executions (7):
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/box_plot_GDvsSGDvsSampling_on_spam.png)
 
+The classification **accuracy** obtained for the attempts: ~ 68-70%.
