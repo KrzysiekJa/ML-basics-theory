@@ -1,4 +1,0 @@
-linki:
-
-https://github.com/rashida048/Machine-Learning-With-Python/blob/master/LogisticRegressionWithHeartDataset.ipynb
-https://archive.ics.uci.edu/ml/datasets/bank+marketing#

@@ -16,7 +16,8 @@
 (7) Same logistic regression with two-class prediction with two-class regularization.
 (8) PCA for reduction of dynamic system simulation results' dimentions (5 to 2).
 (9) Recommendation engine: completing movie ratings.
-(10) Project: GD vs SGD vs Data sampling (on SPAM data)
+(10) Research 0: Project: LogitR and GD vs SGD vs Data sampling (on SPAM data).
+(11) Research 1: (similar) LogitR and GD vs SGD vs Data sampling (on Bank Marketing data).
 ```
 <br>
 
@@ -110,15 +111,17 @@ As a result, it allowed to complete the matrix *Y* with missing ratings.
 
 ## $$Y = h_{\Theta}(X) = \Theta^T X$$
 
-### Project 1
+### Research 0: Project
 
 **Gradient Descent (GD) vs Stochastic Gradient Descent (SGD) vs GD with Sampling**
+
+Source: *https://archive.ics.uci.edu/ml/datasets/spambase*
 
 The project was prepared using **SPAM E-mail Database** data from 1998. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
 
 Basic plots showing their performance are showed below.
 
-Main problem with research: used dataset does not have a well-prepared classification labeling (misclassification error at least ~7%).
+Main problem with research: used dataset does not have a well-prepared classification labeling (misclassification error at least 7%).
 
 * final minimum value found:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
@@ -130,3 +133,5 @@ Main problem with research: used dataset does not have a well-prepared classific
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/box_plot_GDvsSGDvsSampling_on_spam.png)
 
 The classification **accuracy** obtained for the attempts: ~ 68-70%.
+
+
