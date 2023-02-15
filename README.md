@@ -3,6 +3,7 @@
 ###### Technology:
 ```
 - Matlab m-scripts.
+- jupyter notebooks.
 ```
 
 ###### Laboratories legend:
@@ -117,11 +118,11 @@ As a result, it allowed to complete the matrix *Y* with missing ratings.
 
 Source: *https://archive.ics.uci.edu/ml/datasets/spambase*
 
-The project was prepared using **SPAM E-mail Database** data from 1998. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
-
-Basic plots showing their performance are showed below.
+The project was prepared using **SPAM E-mail Database** (shape: 4601x58) data from 1998. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
 
 Main problem with research: used dataset does not have a well-prepared classification labeling (misclassification error at least 7%).
+
+Basic plots showing their performance are put below.
 
 * final minimum value found:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
