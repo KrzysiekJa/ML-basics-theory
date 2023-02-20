@@ -20,6 +20,7 @@
 (10) Research 0: Project: LogitR and GD vs SGD vs Data sampling (on SPAM data).
 (11) Research 1: (similar) LogitR and GD vs SGD vs Data sampling (on Bank Marketing data).
 ```
+*The first project has better description (also mathematical), but in polish, not english. The second one has been made on bigger dataset and has been better done.*
 <br>
 
 ### Lab 4-6
@@ -122,7 +123,7 @@ The project was prepared using **SPAM E-mail Database** (shape: 4601x58) data fr
 
 Main problem with research: used dataset does not have a well-prepared classification labeling (misclassification error at least 7%).
 
-Basic plots showing their performance are put below.
+Example plots showing their performance are put below.
 
 * final minimum value found:
 ![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_spam_searching.png)
@@ -135,4 +136,30 @@ Basic plots showing their performance are put below.
 
 The classification **accuracy** obtained for the attempts: ~ 68-70%.
 
+### Research 1: Project
 
+**Gradient Descent (GD) vs Stochastic Gradient Descent (SGD) vs GD with Sampling**
+
+Source: *https://archive.ics.uci.edu/ml/datasets/bank+marketing*
+
+The project was prepared using **Bank Marketing Data Set** (shape:  41188x21) data from 2014. The main purpose of the study was to compare the methods Gradient Descent (GD), Stochastic Gradient Descent and GD with Sampling, comparing their time efficiency.
+
+**Short project view:**  
+(more in the jupyter notebook)  
+Example plots showing their performance are put below.
+
+* final minimum value found:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_bm_searching.png)
+
+* the minimum value found depending on the number of iterations:
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/plot_GDvsSGDvsSampling_on_bm_perf.png)
+
+* execution time for the number of executions (5):
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/box_plot_GDvsSGDvsSampling_on_bm.png)
+
+The classification **accuracy** for different algorithms:
+- GD: ~77%,  
+- SGD: ~89.8%,  
+- Sampled GD: ~77.7%.  
+
+![](https://github.com/KrzysiekJa/ML-basics-theory/blob/main/images/cm_best_GDvsSGDvsSampling_on_bm.png)
